@@ -19,26 +19,54 @@ body {
 }
 .navbar {
     padding: 15px 18px !important;
-    transition: .3s;
 }
 .logo {
     font-weight: 600;
-    color: rgba(255, 255, 255, .84) !important;
+    color: goldenrod !important;
+    transition: .3s;
 }
 .bxl-mailchimp{
     font-size: 2rem;
 }
 .logo:hover {
-    transform: translateY(-.8px);
+    transform: translateY(-.9px);
 }
+
 .nav-item {
     margin: 0px 10px;
 }
+
 .nav-item .nav-link {
     color: rgba(255, 255, 255, .92);
     font-size: 14px;
     font-weight: 500;
+    position: relative;
 }
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0px;
+    background-color: goldenrod;
+    width: 0%;
+    height: 3px;
+    transition: .4s ease-in-out;
+}
+
+.nav-item:hover .nav-link::after {
+    width: 100%;
+}
+.nav-item:hover {
+    color: rgb(255, 193, 55);
+    /* transform: translateY(-.9px); */
+    transition: 0.3s;
+
+}
+.nav-item .nav-link.active{
+    color: aqua;
+}
+
 .btn-navbar {
     display: inline-block;
     padding: 10px 43px;
@@ -49,13 +77,14 @@ body {
     font-size: 14px;
     font-weight: 600;
     background-color: rgb(36, 193, 255);
-
+    transition: .3s ease;
 }
+
 .btn-navbar:hover {
-    color: #fff;
-    /* border: 1px solid tomato; */
-    background-color: tomato;
-    transform: translateY(-.3s);
+    color: gold;
+    background-color: transparent;
+    border: 1px solid goldenrod;
+    
 }
 
 .content-home2 {
@@ -89,8 +118,24 @@ body {
     border-radius: 50px;
     padding: 10px 37px;
     font-size: 14px;
+    font-weight: 600;
+    transition: .2s ease;
+}
+.btn-2{
+    border: 1px solid cyan;
+    color: aqua;
+    background-color: transparent;
 }
 
+.home-links:hover {
+    background-color: transparent;
+    color: goldenrod;
+    border: 1px solid goldenrod !important;
+}
+.img-home {
+    margin-right: 20px;
+    width: 580px;
+}
 
 
 
